@@ -1,0 +1,13 @@
+<apex:page  controller="FibonacciCalculate">
+    <apex:form>
+        <apex:pageBlock title="Fibonacci Sequence">
+            <apex:pageBlockSection columns="1">
+                <apex:inputText value="{!input}" label="Enter value :"/>
+                <apex:commandButton value = "Calculate" action="{!show}" rerender = "idid" />
+            </apex:pageBlockSection>
+            <apex:outputPanel id = "idid">
+                <apex:outputText value="{!result}" ></apex:outputText>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
