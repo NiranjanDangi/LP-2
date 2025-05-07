@@ -1,0 +1,17 @@
+<apex:page controller="ConvertorTemperature" >
+    <apex:form>
+        <apex:pageBlock title="Convertor Temperature">
+            <apex:pageBlockSection columns="1">
+                <apex:inputText value="{!input}" label = "Enter temperature : " />
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons>
+                <apex:commandButton value = "Celsius to Farenhite : " action="{!convertToFarenhite}" rerender = "idid" />
+                <apex:commandButton value = "Farenhite to Celsius : " action="{!convertToCelsius}" rerender = "idid" />
+            </apex:pageBlockButtons>
+            
+            <apex:outputPanel id = "idid">
+                <apex:outputText value = "The result is {!res}" ></apex:outputText>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
