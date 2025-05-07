@@ -1,0 +1,20 @@
+<apex:page controller="CI_07">
+    <apex:form >
+    	<apex:pageBlock title="Compound Interest and Simple Interest Calculator">
+            <apex:pageBlockSection columns="1">
+                <apex:inputText value="{!principal}" label="Enter principal amount" />
+                <apex:inputText value="{!rate}" label="Enter Rate of Interest (%)" />
+                <apex:inputText value="{!timePeriod}" label="Enter time period(in years)" />
+                <apex:commandButton value="Compound Interest" action="{!calculateCI}" rerender="idid" />
+                <apex:commandButton value="Simple Interest" action="{!calculateSI}" rerender="idid" />
+            </apex:pageBlockSection>
+            
+            <apex:outputPanel id="idid">
+                <apex:pageBlockSection columns="1">
+                    <apex:outputText value="Compound Interest is {!compoundInterest}" />
+                    <apex:outputText value="Simple Interest is {!simpleInterest}" />
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
