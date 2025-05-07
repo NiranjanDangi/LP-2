@@ -1,0 +1,23 @@
+<apex:page controller="ScientificCalculator">
+    <apex:form >
+        <apex:pageBlock title="Scientific Calculator">
+            <apex:pageBlockSection columns="1">
+                	<apex:inputText value="{!num1}" label="Enter Number 1" />
+                	<apex:inputText value="{!num2}" label="Enter Number 2" />
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                    <apex:commandButton value="ADD" action="{!add}" rerender="idid" />
+                	<apex:commandButton value="SUB" action="{!sub}" rerender="idid" />
+                	<apex:commandButton value="MUL" action="{!mul}" rerender="idid" />
+                	<apex:commandButton value="DIV" action="{!div}" rerender="idid" />
+                	<apex:commandButton value="POWER" action="{!power}" rerender="idid" />
+                	<apex:commandButton value="MIN" action="{!mini}" rerender="idid" />
+                	<apex:commandButton value="MAX" action="{!maxi}" rerender="idid" />
+            </apex:pageBlockButtons>
+            <apex:outputPanel id="idid" > 
+                <apex:outputText value="Result is {!res}"  >
+                </apex:outputText>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
