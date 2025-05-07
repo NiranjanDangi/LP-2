@@ -1,0 +1,24 @@
+<apex:page controller="ConvertorCurrency">
+    <apex:form>
+        <apex:pageBlock title = "Currency Convertor" >
+            <apex:pageBlockSection columns="1">
+                <apex:inputText value="{!input}" label="Enter Amount :" />
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons>
+                <apex:commandButton value="INR TO USD" action="{!inrtousd}" rerender = "idid" />
+                <apex:commandButton value="USD TO INR" action="{!usdtoinr}" rerender = "idid" />
+                <apex:commandButton value="INR TO EUR" action="{!inrtoeur}" rerender = "idid" />
+                <apex:commandButton value="EUR TO INR" action="{!eurtoinr}" rerender = "idid" />
+                <apex:commandButton value="INR TO GBP" action="{!inrtogbp}" rerender = "idid" />
+                <apex:commandButton value="GBP TO INR" action="{!gbptoinr}" rerender = "idid" />
+                <apex:commandButton value="INR TO JPY" action="{!inrtojpy}" rerender = "idid" />
+                <apex:commandButton value="JPY TO INR" action="{!jpytoinr}" rerender = "idid" />
+                <apex:commandButton value="INR TO AUD" action="{!inrtoaud}" rerender = "idid" />
+                <apex:commandButton value="AUD TO INR" action="{!audtoinr}" rerender = "idid" />
+            </apex:pageBlockButtons>
+            <apex:outputPanel id = "idid" >
+                <apex:outputText value="Conversion is :  {!result}" ></apex:outputText>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
