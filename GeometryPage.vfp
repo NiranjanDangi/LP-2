@@ -1,0 +1,16 @@
+<apex:page controller="Geometry">
+    <apex:form >
+        <apex:pageBlock title="Area of Geometry Shapes">
+            <apex:pageBlockSection columns="1">
+                <apex:inputText value="{!radius}" label="Enter radius : " />
+                <apex:inputText value="{!side}" label="Enter side : " />
+                <apex:inputText value="{!length}" label="Enter length : " />
+                <apex:inputText value="{!breadth}" label="Enter breadth : " />
+                <apex:commandButton value="Calculate" action="{!show}" rerender="idid" />
+            </apex:pageBlockSection>
+            <apex:outputPanel id = "idid">
+                <apex:outputText value="Circle-{!circle}, Sqaure-{!square}, Rectangle-{!rectangle}" ></apex:outputText>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
