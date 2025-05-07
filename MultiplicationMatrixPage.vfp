@@ -1,0 +1,15 @@
+<apex:page controller="MultiplicationMatrix">
+    <apex:form>
+        <apex:pageBlock title="Matrix Multiplication">
+            <apex:pageBlockSection columns="1">
+                <apex:inputText value="{!inputMatrix1}" label="Matrix 1 (e.g. 1,2,3;4,5,6)" />
+                <apex:inputText value="{!inputMatrix2}" label="Matrix 2 (e.g. 7,8;9,10;11,12)" />
+                <apex:commandButton value="Multiply Matrices" action="{!showResult}" rerender="outPanel" />
+            </apex:pageBlockSection>
+
+            <apex:outputPanel id="outPanel">
+                <apex:outputText value="{!result}" escape="false" />
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
